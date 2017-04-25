@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AutoRennen">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="" visibility="public" xPosition="612.0" yPosition="141.0">
+      <Fields>
+        <Field name="geschwindigkeit" type="double" visibility="private"/>
+        <Field name="beschleunigung" type="double" visibility="private"/>
+        <Field name="zeitinSekunden" type="int" visibility="private"/>
+        <Field name="tankFuellung" type="double" visibility="private"/>
+        <Field name="tankkapazitaet" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Beschleunigen" returnType="void" visibility="public"/>
+        <Method name="Bremsen" returnType="void" visibility="public"/>
+        <Method name="setBeschleunigung" returnType="void" visibility="public"/>
+        <Method name="getBeschleunigung" returnType="void" visibility="public"/>
+        <Method name="setGeschwindigkeit" returnType="void" visibility="public"/>
+        <Method name="getGeschwindigkeit" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ActionListener" package="" visibility="public" xPosition="47.0" yPosition="117.0">
+      <Methods>
+        <Method name="actionPerformend" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Spielerinput" package="" visibility="public" xPosition="54.0" yPosition="313.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Strecke" package="" visibility="public" xPosition="337.0" yPosition="150.0">
+      <Fields>
+        <Field name="EndeBild" type="double" visibility="private"/>
+        <Field name="AnfangBild" type="double" visibility="private"/>
+        <Field name="PositionAuto" type="double" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="positionHindernis" type="double" visibility="private"/>
+        <Field name="untitledField1" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setPositionAuto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="enthält" source="Strecke" target="Auto" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Spielerinput" target="ActionListener"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
