@@ -7,16 +7,7 @@ package autorennen;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-
+    
 /**
  *
  * @author bbsuser
@@ -31,10 +22,7 @@ public class MainMenu extends javax.swing.JFrame implements KeyListener {
         
         Auto autoSpieler1 = new Auto(this.spielerName1.getText());
         Auto autoSpieler2 = new Auto(this.spielerName2.getText());
-        
-        ImageIcon imgAuto = new ImageIcon("Pizza_car..png");
-        auto2.setIcon(imgAuto);
-        
+
         this.tankFuellung1.setValue(100);
         this.tankFuellung2.setValue(100);
     }
@@ -55,7 +43,6 @@ public class MainMenu extends javax.swing.JFrame implements KeyListener {
         tankFuellung1 = new javax.swing.JProgressBar();
         streckeSpieler1 = new javax.swing.JPanel();
         streckeSpieler2 = new javax.swing.JPanel();
-        auto2 = new javax.swing.JLabel();
         bremsen2 = new javax.swing.JButton();
         bremsen1 = new javax.swing.JButton();
         gasGeben2 = new javax.swing.JButton();
@@ -101,23 +88,15 @@ public class MainMenu extends javax.swing.JFrame implements KeyListener {
 
         streckeSpieler2.setBackground(new java.awt.Color(255, 0, 240));
 
-        auto2.setText("auto2");
-
         javax.swing.GroupLayout streckeSpieler2Layout = new javax.swing.GroupLayout(streckeSpieler2);
         streckeSpieler2.setLayout(streckeSpieler2Layout);
         streckeSpieler2Layout.setHorizontalGroup(
             streckeSpieler2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(streckeSpieler2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(auto2, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
+            .addGap(0, 100, Short.MAX_VALUE)
         );
         streckeSpieler2Layout.setVerticalGroup(
             streckeSpieler2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, streckeSpieler2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(auto2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 427, Short.MAX_VALUE)
         );
 
         bremsen2.setText("Bremsen");
@@ -289,7 +268,6 @@ public class MainMenu extends javax.swing.JFrame implements KeyListener {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel auto2;
     private javax.swing.JButton bremsen1;
     private javax.swing.JButton bremsen2;
     private javax.swing.JLabel countdown;
@@ -298,8 +276,8 @@ public class MainMenu extends javax.swing.JFrame implements KeyListener {
     private javax.swing.JButton gasGeben2;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel spielerName1;
-    private javax.swing.JLabel spielerName2;
+    public javax.swing.JLabel spielerName1;
+    public javax.swing.JLabel spielerName2;
     private javax.swing.JPanel streckeSpieler1;
     private javax.swing.JPanel streckeSpieler2;
     private javax.swing.JProgressBar tankFuellung1;
